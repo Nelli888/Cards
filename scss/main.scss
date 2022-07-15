@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap');
+@import "container";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+
+    background-color: #9789F9;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 40px;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.card {
+    width: 30%;
+    min-width: 280px;
+    background-color: #e2e2e2;
+    margin-bottom: 30px;
+    transition: all 1s linear;
+    cursor: pointer;
+    position: relative;
+
+    &__content {
+        background-image: url(../img/bg-image.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+
+    }
+
+    &__btn {
+        position: absolute;
+        left: calc(50% - 100px);
+        bottom: -25px;
+        transition: all 1s linear;
+    }
+
+    &__badge {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: none;
+
+        &:after {
+            content: url(../img/Tooltip.svg);
+            position: absolute;
+            width: 100px;
+            height: 30px;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    &:hover>.card__btn {
+        transform: translateY(-90px);
+        background-color: #FD8D7B;
+    }
+
+    &:hover>.card__badge {
+        display: inline-block;
+        z-index: 3;
+    }
+
+}
+
+.list {
+    list-style: none;
+
+    &__item {
+        font-family: $main_font_family;
+        font-size: $main_font_size;
+        color: $main_color;
+        margin-bottom: 30px;
+    }
+
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+.number {
+    display: block;
+    font-family: $capital_font_family;
+    font-size: 60px;
+    line-height: 35px;
+    color: $main_color;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+        content: "$";
+        position: absolute;
+        font-size: 24px;
+        color: $item_font_color;
+        top: -15px;
+        left: -10px;
+    }
+
+    &::after {
+        content: "/HR";
+        position: absolute;
+        font-size: 16px;
+        color: $item_font_color;
+        bottom: -15px;
+        right: -20px;
+    }
+}
+
+.description {
+    font-family: $capital_font_family;
+    font-size: 24px;
+    color: $main_color;
+}
+
+.text-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+
+    &__item {
+        margin-bottom: 40px;
+        margin-top: 40px;
+
+    }
+}
+
+.text {
+    font-family: $main_font_family;
+    font-size: 11px;
+    font-weight: 300;
+    color: #868686;
+    z-index: -1;
+
+}
+
+.btn {
+    font-family: $capital_font_family;
+    font-weight: 400;
+    font-size: 18px;
+    color: $capital_color;
+    background-color: #6FCFFB;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+}

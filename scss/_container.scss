@@ -1,0 +1,21 @@
+.container {
+    margin: 0 auto;
+    padding: 50px calc(50vw - 585px);
+
+    @media screen and (max-width: 1200px) {
+        padding: 50px calc(50vw - 470px);
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 50px calc(50vw - 370px);
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 50px calc(50vw - 270px);
+    }
+
+    @media screen and (max-width: 576px) {
+        padding: 50px;
+    }
+
+}

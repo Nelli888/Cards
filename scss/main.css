@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap");
+.container {
+  margin: 0 auto;
+  padding: 50px calc(50vw - 585px);
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 50px calc(50vw - 470px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 50px calc(50vw - 370px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 50px calc(50vw - 270px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 50px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  background-color: #9789F9;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 40px;
+}
+.logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 30%;
+  min-width: 280px;
+  background-color: #e2e2e2;
+  margin-bottom: 30px;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  cursor: pointer;
+  position: relative;
+}
+.card__content {
+  background-image: url(../img/bg-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+}
+.card__btn {
+  position: absolute;
+  left: calc(50% - 100px);
+  bottom: -25px;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.card__badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+.card__badge:after {
+  content: url(../img/Tooltip.svg);
+  position: absolute;
+  width: 100px;
+  height: 30px;
+}
+.card:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 1;
+}
+.card:hover > .card__btn {
+  -webkit-transform: translateY(-90px);
+      -ms-transform: translateY(-90px);
+          transform: translateY(-90px);
+  background-color: #FD8D7B;
+}
+.card:hover > .card__badge {
+  display: inline-block;
+  z-index: 3;
+}
+
+.list {
+  list-style: none;
+}
+.list__item {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+.number {
+  display: block;
+  font-family: "Bebas Neue", cursive;
+  font-size: 60px;
+  line-height: 35px;
+  color: #000000;
+  margin-bottom: 20px;
+  position: relative;
+}
+.number::before {
+  content: "$";
+  position: absolute;
+  font-size: 24px;
+  color: #565656;
+  top: -15px;
+  left: -10px;
+}
+.number::after {
+  content: "/HR";
+  position: absolute;
+  font-size: 16px;
+  color: #565656;
+  bottom: -15px;
+  right: -20px;
+}
+
+.description {
+  font-family: "Bebas Neue", cursive;
+  font-size: 24px;
+  color: #000000;
+}
+
+.text-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+}
+.text-bottom__item {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: #868686;
+  z-index: -1;
+}
+
+.btn {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: #6FCFFB;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+  height: 50px;
+  width: 200px;
+}/*# sourceMappingURL=main.css.map */
